@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taniya Vincent | Environmental & Water Quality Professional</title>
+    <style>
+        :root {
+            --color-white: rgba(255, 255, 255, 1);
+            --color-black: rgba(0, 0, 0, 1);
+            --color-cream-50: rgba(252, 252, 249, 1);
+            --color-cream-100: rgba(255, 255, 253, 1);
+            --color-gray-200: rgba(245, 245, 245, 1);
+            --color-gray-300: rgba(167, 169, 169, 1);
+            --color-gray-400: rgba(119, 124, 124, 1);
+            --color-slate-500: rgba(98, 108, 113, 1);
+            --color-brown-600: rgba(94, 82, 64, 1);
+            --color-charcoal-700: rgba(31, 33, 33, 1);
+            --color-charcoal-800: rgba(38, 40, 40, 1);
+            --color-slate-900: rgba(19, 52, 59, 1);
+            --color-teal-300: rgba(50, 184, 198, 1);
+            --color-teal-400: rgba(45, 166, 178, 1);
+            --color-teal-500: rgba(33, 128, 141, 1);
+            --color-teal-600: rgba(29, 116, 128, 1);
+            --color-teal-700: rgba(26, 104, 115, 1);
+            --color-teal-800: rgba(41, 150, 161, 1);
+            --color-brown-600-rgb: 94, 82, 64;
+            --color-teal-500-rgb: 33, 128, 141;
+            --color-slate-900-rgb: 19, 52, 59;
+            --color-slate-500-rgb: 98, 108, 113;
+            --color-background: var(--color-cream-50);
+            --color-surface: var(--color-cream-100);
+            --color-text: var(--color-slate-900);
+            --color-text-secondary: var(--color-slate-500);
+            --color-primary: var(--color-teal-500);
+            --color-primary-hover: var(--color-teal-600);
+            --color-primary-active: var(--color-teal-700);
+            --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+            --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+            --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+            --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+            --color-btn-primary-text: var(--color-cream-50);
+            --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+            --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-size-xs: 11px;
+            --font-size-sm: 12px;
+            --font-size-base: 14px;
+            --font-size-lg: 16px;
+            --font-size-xl: 18px;
+            --font-size-2xl: 20px;
+            --font-size-3xl: 24px;
+            --font-size-4xl: 30px;
+            --font-weight-normal: 400;
+            --font-weight-medium: 500;
+            --font-weight-semibold: 550;
+            --font-weight-bold: 600;
+            --space-8: 8px;
+            --space-12: 12px;
+            --space-16: 16px;
+            --space-20: 20px;
+            --space-24: 24px;
+            --space-32: 32px;
+            --radius-base: 8px;
+            --radius-lg: 12px;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-gray-400-rgb: 119, 124, 124;
+                --color-teal-300-rgb: 50, 184, 198;
+                --color-gray-300-rgb: 167, 169, 169;
+                --color-gray-200-rgb: 245, 245, 245;
+                --color-background: var(--color-charcoal-700);
+                --color-surface: var(--color-charcoal-800);
+                --color-text: var(--color-gray-200);
+                --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+                --color-primary: var(--color-teal-300);
+                --color-primary-hover: var(--color-teal-400);
+                --color-primary-active: var(--color-teal-800);
+                --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+                --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+                --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+                --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+                --color-btn-primary-text: var(--color-slate-900);
+                --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family-base);
+            background: linear-gradient(-45deg, #00d4aa, #00b8d4, #7c4dff, #00e676);
+            background-size: 400% 400%;
+            animation: gradient 12s ease infinite;
+            color: var(--color-text);
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(0, 212, 170, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(124, 77, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(0, 184, 212, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: linear-gradient(-45deg, #0a4d45, #1a237e, #4a148c, #1b5e20);
+                background-size: 400% 400%;
+                animation: gradient 12s ease infinite;
+            }
+            
+            body::before {
+                background: 
+                    radial-gradient(circle at 20% 50%, rgba(0, 212, 170, 0.08) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 80%, rgba(124, 77, 255, 0.08) 0%, transparent 50%),
+                    radial-gradient(circle at 40% 20%, rgba(0, 184, 212, 0.08) 0%, transparent 50%);
+            }
+        }
+
+        header {
+            background-color: var(--color-surface);
+            border-bottom: 1px solid var(--color-card-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--space-16) var(--space-24);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-primary);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: var(--space-24);
+        }
+
+        nav a {
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: var(--font-weight-medium);
+            transition: all 0.3s;
+            padding: 8px 12px;
+            border-radius: var(--radius-base);
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            color: var(--color-primary);
+            background-color: var(--color-secondary);
+        }
+
+        nav a.active {
+            color: var(--color-primary);
+            background-color: var(--color-secondary);
+            font-weight: var(--font-weight-bold);
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--space-32) var(--space-24);
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero {
+            text-align: center;
+            padding: var(--space-32) 0;
+            margin-bottom: var(--space-32);
+        }
+
+        .hero h1 {
+            font-size: var(--font-size-4xl);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-12);
+            color: var(--color-text);
+        }
+
+        .hero .subtitle {
+            font-size: var(--font-size-xl);
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-8);
+        }
+
+        .hero .location {
+            font-size: var(--font-size-base);
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-16);
+        }
+
+        .hero .contact-links {
+            display: flex;
+            gap: var(--space-16);
+            justify-content: center;
+            flex-wrap: wrap;
+            font-size: var(--font-size-base);
+        }
+
+        .hero .contact-links a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        .hero .contact-links a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-bottom: var(--space-32);
+        }
+
+        .section h2 {
+            font-size: var(--font-size-3xl);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-20);
+            color: var(--color-text);
+            border-bottom: 3px solid var(--color-primary);
+            padding-bottom: var(--space-8);
+        }
+
+        .card {
+            background-color: var(--color-surface);
+            border: 1px solid var(--color-card-border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-24);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: var(--space-20);
+        }
+
+        .about-text {
+            font-size: var(--font-size-lg);
+            line-height: 1.7;
+            color: var(--color-text);
+            margin-bottom: var(--space-20);
+        }
+
+        .competencies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-8);
+        }
+
+        .competency-tag {
+            background-color: var(--color-secondary);
+            color: var(--color-text);
+            padding: 6px var(--space-12);
+            border-radius: 20px;
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-medium);
+        }
+
+        .experience-item {
+            margin-bottom: var(--space-24);
+        }
+
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: var(--space-12);
+            flex-wrap: wrap;
+            gap: var(--space-8);
+        }
+
+        .experience-title {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-text);
+        }
+
+        .experience-company {
+            font-size: var(--font-size-base);
+            color: var(--color-text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .experience-date {
+            font-size: var(--font-size-base);
+            color: var(--color-text-secondary);
+            font-style: italic;
+        }
+
+        .experience-item ul {
+            margin-left: var(--space-20);
+            margin-bottom: var(--space-12);
+        }
+
+        .experience-item li {
+            margin-bottom: 6px;
+            color: var(--color-text);
+        }
+
+        .achievement {
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-primary);
+            font-style: italic;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-20);
+        }
+
+        .skill-category h3 {
+            font-size: var(--font-size-lg);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-primary);
+            margin-bottom: var(--space-8);
+        }
+
+        .skill-category p {
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        .education-grid {
+            display: grid;
+            gap: var(--space-20);
+        }
+
+        .education-item {
+            padding-bottom: var(--space-16);
+            border-bottom: 1px solid var(--color-card-border);
+        }
+
+        .education-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .education-degree {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-text);
+            margin-bottom: 4px;
+        }
+
+        .education-school {
+            font-size: var(--font-size-base);
+            color: var(--color-text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .education-focus {
+            font-size: var(--font-size-base);
+            color: var(--color-primary);
+            font-style: italic;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-32);
+        }
+
+        .contact-info h3 {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-16);
+            color: var(--color-text);
+        }
+
+        .contact-info p {
+            margin-bottom: var(--space-12);
+            color: var(--color-text);
+        }
+
+        .contact-info a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form h3 {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-16);
+            color: var(--color-text);
+        }
+
+        .form-group {
+            margin-bottom: var(--space-16);
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: var(--font-weight-medium);
+            color: var(--color-text);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: var(--space-12);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-base);
+            font-family: var(--font-family-base);
+            font-size: var(--font-size-base);
+            background-color: var(--color-background);
+            color: var(--color-text);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: var(--color-btn-primary-text);
+            padding: var(--space-12) var(--space-24);
+            border: none;
+            border-radius: var(--radius-base);
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-semibold);
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-primary-hover);
+        }
+
+        .btn-primary:active {
+            background-color: var(--color-primary-active);
+        }
+
+        footer {
+            background-color: var(--color-surface);
+            border-top: 1px solid var(--color-card-border);
+            padding: var(--space-24);
+            text-align: center;
+            color: var(--color-text-secondary);
+            font-size: var(--font-size-sm);
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: var(--space-16);
+            }
+
+            nav ul {
+                gap: var(--space-16);
+            }
+
+            .hero h1 {
+                font-size: var(--font-size-3xl);
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">TANIYA VINCENT</div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div id="homePage" class="page active">
+            <section class="hero">
+            <h1>Taniya Vincent</h1>
+            <div class="subtitle">Environmental &amp; Water Quality Professional</div>
+            <div class="location">📍 Bournemouth, England, United Kingdom</div>
+            <div class="contact-links">
+                <span>📞 07810046397</span>
+                <a href="mailto:taniyabrigit16@gmail.com">✉️ taniyabrigit16@gmail.com</a>
+                <a href="https://www.linkedin.com/in/taniya-vincent-a7934018a/" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
+            </div>
+        </section>
+        </div>
+
+        <div id="aboutPage" class="page">
+            <section id="about" class="section">
+            <h2>About</h2>
+            <div class="card">
+                <p class="about-text">
+                    Results-driven environmental professional with extensive experience in water quality monitoring, regulatory compliance, and technical project coordination. Proven track record in stakeholder engagement, document control, and data analysis within regulated water and environmental sectors. Skilled in leveraging Microsoft Office and Power BI for performance tracking and insight development. Currently pursuing Master by Research at Bournemouth University specializing in analytical chemistry and water sampling methodologies.
+                </p>
+                <h3 style="font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); margin-bottom: var(--space-12); color: var(--color-text);">Core Competencies</h3>
+                <div class="competencies">
+                    <span class="competency-tag">Project Coordination &amp; Management</span>
+                    <span class="competency-tag">Stakeholder Engagement</span>
+                    <span class="competency-tag">Document Control &amp; Quality Assurance</span>
+                    <span class="competency-tag">Regulatory Compliance</span>
+                    <span class="competency-tag">Risk Assessment &amp; Management</span>
+                    <span class="competency-tag">Performance Tracking &amp; Reporting</span>
+                    <span class="competency-tag">Water Resources Planning</span>
+                    <span class="competency-tag">Technical Documentation</span>
+                    <span class="competency-tag">Data Analysis &amp; Visualization</span>
+                    <span class="competency-tag">Microsoft Office Suite</span>
+                    <span class="competency-tag">Microsoft Power BI</span>
+                    <span class="competency-tag">Problem Solving</span>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        <div id="experiencePage" class="page">
+            <section id="experience" class="section">
+            <h2>Professional Experience</h2>
+            <div class="card">
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Master by Research Student</div>
+                            <div class="experience-company">Bournemouth University, Bournemouth, England</div>
+                        </div>
+                        <div class="experience-date">September 2025 – Present</div>
+                    </div>
+                    <ul>
+                        <li>Coordinate complex analytical research projects involving PFAS detection in water samples</li>
+                        <li>Develop and maintain documentation protocols ensuring ISO compliance</li>
+                        <li>Collaborate with academic supervisors, technicians, and industry partners</li>
+                        <li>Utilize MS Power BI for data visualization and progress tracking</li>
+                        <li>Manage technical documentation and ensure research accessibility</li>
+                        <li>Apply quality control using HPLC, GC-MS, UV/Vis and spectrofluorometry</li>
+                        <li>Conduct systematic water sampling campaigns</li>
+                        <li>Prepare detailed progress reports for stakeholders</li>
+                    </ul>
+                    <p class="achievement">Key Achievement: Developed novel analytical methodologies for environmental water monitoring.</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Graduate Engineer</div>
+                            <div class="experience-company">Kerala State Pollution Control Board, Kerala, India</div>
+                        </div>
+                        <div class="experience-date">June 2024 – June 2025</div>
+                    </div>
+                    <ul>
+                        <li>Coordinated water quality monitoring programmes across multiple sites</li>
+                        <li>Conducted inspections of wastewater and industrial treatment facilities</li>
+                        <li>Managed stakeholder relationships in regulated environments</li>
+                        <li>Prepared technical documentation and regulatory reports</li>
+                        <li>Tracked environmental compliance metrics and implemented improvements</li>
+                        <li>Applied ISO standards for quality governance</li>
+                        <li>Supported long-term environmental planning initiatives</li>
+                        <li>Analyzed water sampling data for decision-making</li>
+                    </ul>
+                    <p class="achievement">Key Achievement: Maintained 100% regulatory compliance across multiple monitoring projects.</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Research Assistant</div>
+                            <div class="experience-company">Government Engineering College, Thrissur, Kerala, India</div>
+                        </div>
+                        <div class="experience-date">November 2021 – July 2023</div>
+                    </div>
+                    <ul>
+                        <li>Supported environmental assessment projects using GIS and ArcGIS Desktop</li>
+                        <li>Conducted Life Cycle Assessments (LCA) with SimaPro</li>
+                        <li>Performed environmental, health &amp; safety risk assessments</li>
+                        <li>Prepared technical reports for planning and decision-making</li>
+                        <li>Collaborated with academic and industry partners on water resources research</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        <div id="skillsPage" class="page">
+            <section id="skills" class="section">
+            <h2>Technical Skills</h2>
+            <div class="card">
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Software</h3>
+                        <p>MS Office, Power BI, ArcGIS Desktop, GIS, SimaPro, AutoCAD</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Instrumentation</h3>
+                        <p>HPLC, GC-MS, UV/Vis-Spectrometry, Spectrofluorometry</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Specializations</h3>
+                        <p>Water Sampling &amp; Analysis, Water Quality Monitoring, Wastewater Treatment, ISO Standards</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Core Skills</h3>
+                        <p>Project Coordination, Programme Management, Document Control, Data Analysis</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <section id="education" class="section">
+            <h2>Education</h2>
+            <div class="card">
+                <div class="education-grid">
+                    <div class="education-item">
+                        <div class="education-degree">Master by Research (MRes) – Analytical Chemistry</div>
+                        <div class="education-school">Bournemouth University | 2024 – Present</div>
+                        <div class="education-focus">Research Focus: PFAS Detection and Water Quality Analysis</div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-degree">Master of Technology (M.Tech) – Health Safety and Environmental Management</div>
+                        <div class="education-school">Government Engineering College, Thrissur | 2021 – 2023</div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-degree">Bachelor of Technology (B.Tech) – Civil Engineering</div>
+                        <div class="education-school">KMEA Engineering College, Cochin | 2017 – 2021</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 style="font-size: var(--font-size-xl); font-weight: var(--font-weight-bold); margin-bottom: var(--space-16); color: var(--color-text);">Additional Information</h3>
+                <ul style="margin-left: var(--space-20); color: var(--color-text);">
+                    <li>Eligible to work in the United Kingdom</li>
+                    <li>Available for hybrid work</li>
+                    <li>Languages: English (Fluent)</li>
+                    <li>Interests: Water Resources Planning, Sustainability, Environmental Regulation</li>
+                </ul>
+            </div>
+        </section>
+        </div>
+
+        <div id="contactPage" class="page">
+            <section id="contact" class="section">
+            <h2>Contact</h2>
+            <div class="card">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <p><strong>Email:</strong> <a href="mailto:taniyabrigit16@gmail.com">taniyabrigit16@gmail.com</a></p>
+                        <p><strong>Phone:</strong> 07810046397</p>
+                        <p><strong>Location:</strong> Bournemouth, England, United Kingdom</p>
+                        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/taniya-vincent-a7934018a/" target="_blank" rel="noopener noreferrer">Connect with me</a></p>
+                        <p style="margin-top: var(--space-20); color: var(--color-text-secondary);">I'm available for opportunities in water quality monitoring, environmental compliance, analytical chemistry research, and project coordination roles. Open to hybrid work arrangements.</p>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Send a Message</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Taniya Vincent. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const pages = {
+            '#about': 'aboutPage',
+            '#experience': 'experiencePage',
+            '#skills': 'skillsPage',
+            '#education': 'skillsPage',
+            '#contact': 'contactPage'
+        };
+
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+                this.classList.add('active');
+                
+                const targetId = this.getAttribute('href');
+                
+                if (targetId === '#about' || targetId === '#experience' || 
+                    targetId === '#skills' || targetId === '#education' || targetId === '#contact') {
+                    const pageId = pages[targetId];
+                    showPage(pageId);
+                } else {
+                    showPage('homePage');
+                }
+            });
+        });
+
+        document.querySelector('.logo').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+            showPage('homePage');
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+            
+            alert('Thank you for your message! This is a demo form. In a live website, this would send your message to Taniya.\n\nForm data:\nName: ' + formData.name + '\nEmail: ' + formData.email + '\nSubject: ' + formData.subject);
+            
+            this.reset();
+        });
+    </script>
+</body>
+</html>
